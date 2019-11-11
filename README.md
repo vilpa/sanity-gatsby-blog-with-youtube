@@ -1,4 +1,4 @@
-# Blog with Gatsby with YouTube
+# Blog with Gatsby with YouTube.
 
 _Fully customizable blog template with a React.js front-end._
 
