@@ -6,7 +6,7 @@ export default {
         templateRepoId: 'sanity-io/sanity-template-gatsby-blog'
       }
     },
-    {name: 'structure-menu'},
+    { name: 'structure-menu' },
     {
       name: 'project-info',
       options: {
@@ -36,18 +36,22 @@ export default {
         data: [
           {
             title: 'GitHub repo',
-            value: 'https://github.com/kmelve/sanity-gatsby-blog-with-youtube',
+            value: 'https://github.com/vilpa/GaGoMui',
             category: 'Code'
           },
-          {title: 'Frontend', value: 'https://sanity-gatsby-blog-with-youtube.netlify.com', category: 'apps'}
+          {
+            title: 'Frontend',
+            value: 'https://serene-volhard-874d14.netlify.com',
+            category: 'apps'
+          }
         ]
       }
     },
-    {name: 'project-users', layout: {height: 'auto'}},
+    { name: 'project-users', layout: { height: 'auto' } },
     {
       name: 'document-list',
-      options: {title: 'Recent blog posts', order: '_createdAt desc', types: ['post']},
-      layout: {width: 'medium'}
+      options: { title: 'Recent blog posts', order: '_createdAt desc', types: ['post'] },
+      layout: { width: 'medium' }
     }
   ]
 }

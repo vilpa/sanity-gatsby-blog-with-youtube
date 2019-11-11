@@ -1,4 +1,4 @@
-import {format} from 'date-fns'
+import { format } from 'date-fns'
 
 export default {
   name: 'post',
@@ -22,6 +22,12 @@ export default {
       }
     },
     {
+      name: 'publishOrder',
+      type: 'number',
+      title: 'Publishing order',
+      description: 'Set order number to display posts'
+    },
+    {
       name: 'publishedAt',
       type: 'datetime',
       title: 'Published at',
@@ -40,19 +46,9 @@ export default {
         'This ends up on summary pages, on Google, when people share your post in social media.'
     },
     {
-      name: 'authors',
-      title: 'Authors',
-      type: 'array',
-      of: [
-        {
-          type: 'authorReference'
-        }
-      ]
-    },
-    {
       name: 'categories',
       type: 'array',
-      title: 'Categories',
+      title: 'Tags',
       of: [
         {
           type: 'reference',
@@ -66,6 +62,26 @@ export default {
       name: 'body',
       type: 'bodyPortableText',
       title: 'Body'
+    },
+    {
+      name: 'keywords',
+      type: 'array',
+      title: 'Keywords',
+      description: 'Add keywords that describes your site.',
+      of: [{ type: 'string' }],
+      options: {
+        layout: 'tags'
+      }
+    },
+    {
+      name: 'authors',
+      title: 'Authors',
+      type: 'array',
+      of: [
+        {
+          type: 'authorReference'
+        }
+      ]
     }
   ],
   orderings: [
@@ -73,6 +89,10 @@ export default {
       name: 'publishingDateAsc',
       title: 'Publishing date new–>old',
       by: [
+        {
+          field: 'publishOrder',
+          direction: 'asc'
+        },
         {
           field: 'publishedAt',
           direction: 'asc'
@@ -87,6 +107,10 @@ export default {
       name: 'publishingDateDesc',
       title: 'Publishing date old->new',
       by: [
+        {
+          field: 'publishOrder',
+          direction: 'desc'
+        },
         {
           field: 'publishedAt',
           direction: 'desc'
@@ -103,15 +127,17 @@ export default {
       title: 'title',
       publishedAt: 'publishedAt',
       slug: 'slug',
-      media: 'mainImage'
+      media: 'mainImage',
+      publishOrder: 'publishOrder'
     },
-    prepare ({title = 'No title', publishedAt, slug, media}) {
+    prepare({ title = 'No title', publishedAt, slug, media, publishOrder }) {
       const dateSegment = format(publishedAt, 'YYYY/MM')
       const path = `/${dateSegment}/${slug.current}/`
       return {
         title,
         media,
-        subtitle: publishedAt ? path : 'Missing publishing date'
+        subtitle: publishOrder ? publishOrder : 'Missing publishing order',
+        publishOrder
       }
     }
   }

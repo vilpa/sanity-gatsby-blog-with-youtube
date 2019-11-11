@@ -4,8 +4,8 @@
     "name": "Blog with Gatsby with YouTube"
   },
   "api": {
-    "projectId": "mpuwlobw",
-    "dataset": "production"
+    "projectId": "boyvw97y",
+    "dataset": "test"
   },
   "plugins": [
     "@sanity/base",
