@@ -23,7 +23,9 @@ export default {
       name: 'text',
       title: 'Text',
       type: 'array',
-      of: [{ type: 'block' }],
+      of: [
+        {type: 'block'}
+      ],
       options: {
         isHighlighted: true
       }

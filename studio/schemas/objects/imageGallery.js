@@ -1,8 +1,12 @@
-import customEditor from './customEditor'
+import FaPaperclip from 'react-icons/lib/fa/paperclip'
+
 export default {
   name: 'imageGallery',
   type: 'object',
   title: 'Image Gallery',
+  blockEditor: {
+    icon: FaPaperclip
+  },
   fields: [
     {
       name: 'images',
@@ -36,10 +40,20 @@ export default {
                 isHighlighted: true
               }
             }
-          ],
-          options: { hotspot: true }
+          ]
         }
       ]
     }
-  ]
+  ],
+  preview: {
+    select: {
+      images: 'images'
+    },
+    prepare (value) {
+      const f = value.images
+      return {
+        title: f.map(mainImage => mainImage.caption).join(' ; ')
+      }
+    }
+  }
 }

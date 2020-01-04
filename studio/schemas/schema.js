@@ -20,7 +20,9 @@ import authorReference from './objects/authorReference'
 import youTube from './objects/youTube'
 import pictureCard from './objects/pictureCard'
 import iconCard from './objects/iconCard'
+import pdfFile from './objects/pdfFile'
 import imageGallery from './objects/imageGallery'
+import filesGallery from './objects/filesGallery'
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -43,7 +45,9 @@ export default createSchema({
     youTube,
     pictureCard,
     iconCard,
+    pdfFile,
     imageGallery,
+    filesGallery,
     menu
     // When added to this list, object types can be used as
     // { type: 'typename' } in other document schemas

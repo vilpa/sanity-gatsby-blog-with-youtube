@@ -3,7 +3,7 @@ import YouTube from 'react-youtube'
 import getYouTubeId from 'get-youtube-id'
 
 const YouTubePreview = ({value}) => {
-  const { url} = value
+  const {url} = value
   const id = getYouTubeId(url)
   return (<YouTube
     videoId={id}
@@ -18,7 +18,7 @@ export default {
     {
       name: 'url',
       type: 'url',
-      title: 'URL',
+      title: 'URL'
     }
   ],
   preview: {
@@ -26,6 +26,5 @@ export default {
       url: 'url'
     },
     component: YouTubePreview
-  },
-
+  }
 }
