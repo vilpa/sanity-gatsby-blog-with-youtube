@@ -61,6 +61,21 @@ export default {
       options: {
         layout: 'tags'
       }
-    }
+    },
+	{
+      name: 'facebook',
+      type: 'string',
+      title: 'Facebook'
+    },
+	{
+      name: 'twitter',
+      type: 'string',
+      title: 'Twitter'
+    },
+	{
+      name: 'timezone',
+      type: 'string',
+      title: 'Time Zone'
+    },
   ]
 }

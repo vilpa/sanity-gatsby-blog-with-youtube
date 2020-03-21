@@ -23,10 +23,22 @@ export default {
       }
     },
     {
+      name: 'disabled',
+      type: 'boolean',
+      ttile: 'Disabled'
+    },
+    {
       name: 'text',
       title: 'Text',
       type: 'array',
-      of: [{ type: 'block' }],
+      of: [
+        {
+          type: 'block'
+        },
+        {
+          type: 'youtube'
+        }
+      ],
       options: {
         isHighlighted: true
       }

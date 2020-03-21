@@ -5,6 +5,7 @@ import FaFileImageO from 'react-icons/lib/fa/file-image-o'
 import FaFilePdfO from 'react-icons/lib/fa/file-pdf-o'
 import FaYoutubeSquare from 'react-icons/lib/fa/youtube-square'
 import FaUser from 'react-icons/lib/fa/user'
+import FaNewspaperO from 'react-icons/lib/fa/newspaper-o'
 
 export default {
   name: 'bodyPortableText',
@@ -34,6 +35,10 @@ export default {
     {
       type: 'filesGallery',
       icon: () => (<FaFilePdfO />)
+    },
+    {
+      type: 'pictureCard',
+      icon: () => (<FaNewspaperO />)
     }
   ]
 }

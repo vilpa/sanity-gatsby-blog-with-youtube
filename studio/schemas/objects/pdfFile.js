@@ -10,7 +10,7 @@ export default {
       name: 'caption',
       type: 'string',
       title: 'Caption',
-      validation: Rule => Rule.error('You have to fill out the captipon text.').required(),
+      validation: Rule => Rule.error('You have to fill out the caption text.').required(),
       options: {
         isHighlighted: true
       }
