@@ -25,7 +25,12 @@ export default {
     {
       name: 'disabled',
       type: 'boolean',
-      ttile: 'Disabled'
+      title: 'Disabled'
+    },
+    {
+      name: 'link',
+      type: 'string',
+      title: 'External Link'
     },
     {
       name: 'text',
