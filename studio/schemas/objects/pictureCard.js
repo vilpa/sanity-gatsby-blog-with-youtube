@@ -44,7 +44,7 @@ export default {
           type: 'youtube'
         },
         {
-          type: 'image'
+          type: 'mainImage'
         }
       ],
       options: {
